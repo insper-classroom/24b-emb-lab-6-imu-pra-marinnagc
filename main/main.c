@@ -102,8 +102,7 @@ void mpu6050_task(void *p) {
 
     FusionAhrs ahrs;
     FusionAhrsInitialise(&ahrs);
-    float last_roll = 0.0f;   // Variável para armazenar o valor anterior de Roll
-
+  
     while(1) {
         mpu6050_read_raw(acceleration, gyro, &temp);
         //printf("%08d", acceleration[0], acceleration[1], acceleration[2]);
